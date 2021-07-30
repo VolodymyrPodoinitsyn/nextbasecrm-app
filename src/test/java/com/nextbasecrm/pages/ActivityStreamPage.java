@@ -30,6 +30,9 @@ public class ActivityStreamPage {
     @FindBy(xpath = "//button[@id='blog-submit-button-cancel']")
     public WebElement cancelButton;
 
+    @FindBy(xpath = "//span[.='Send message …']")
+    public WebElement massageText;
+
     @FindBy(xpath = "(//a[.='helpdesk19@cybertekschool.com'])[1]")
     public WebElement postUserName;
 

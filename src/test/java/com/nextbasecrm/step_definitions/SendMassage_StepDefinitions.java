@@ -43,9 +43,15 @@ public class SendMassage_StepDefinitions {
     }
 
 
-    @Then("user click Cancel button")
+    @When("user click Cancel button")
     public void userClickCancelButton() {
         activityStreamPage.cancelButton.click();
+    }
+
+    @Then("user should see the massage {string}")
+    public void user_should_see_the_massage(String expectedMassageText) {
+        String actualMassageText = activityStreamPage.massageText.getText();
+        Assert.assertEquals("Massage not canceled!", expectedMassageText, actualMassageText);
     }
 
     @When("user click {string} button")

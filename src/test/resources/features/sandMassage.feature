@@ -13,11 +13,14 @@ Feature: NextBaseSRM send massage functionality
     Then user should see the message from the "helpdesk19@cybertekschool.com"
 #Have a nice day!
 
+  @wip
   Scenario: Cancel a message
     And user adds text "Hello everyone!!!"
-    Then user click Cancel button
+    And user click Cancel button
+    Then user should see the massage "Send message …"
 
-  @wip
+
+
   Scenario: Attach a link
     And user click "Link" button
     And user adds "Cucumber Documentation"  in the link text box
